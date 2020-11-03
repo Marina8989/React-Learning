@@ -1,21 +1,25 @@
 import React from 'react'
-import './App.css';
+
 
 class App extends React.Component {
-  constructor() {
+  construction () {
     super()
-      this.state = {
-        name: 'Marina',
-        age: 67
-      }
+    this.state = {
+       isLoggedIn: false
+    }
   }
   render() {
-      return (
-    <div>
-       <h3>{this.state.name}</h3>
-       <h4>{this.state.age} years old</h4>
-    </div>
-  );
+     let wordDisplay
+     if(this.state.isLoggedIn) {
+       wordDisplay = 'in'
+     }else {
+       wordDisplay = 'out'
+     }
+     return (
+        <div>
+          <h1>You are currently loged {wordDisplay}</h1>
+        </div>
+     )
   }
 }
 
